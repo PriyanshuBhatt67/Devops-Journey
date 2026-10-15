@@ -1,3 +1,6 @@
+# By making This file My  goal is to Learn Variable concepts and writing in a way that
+# for future keeping and putting simple examples for revision(if bychance forget any concept).
+
 """Imagine you have a box in which you store something.you write a label on that box so you can 
 identify what's inside. ho yesari  nae bujhna sakinxa ki A variable works similarly like this example.
 
