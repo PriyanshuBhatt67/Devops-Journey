@@ -68,9 +68,54 @@ print(age)
 print(is_learning_devops)
 print(University)
 """2. Variable ReAssignment - Yo ni easy ho . Variable ReAssignment vanna le is
+Value lai Feri(Re) Assign gareko. Python Interpreter based language honi
+ho tesaile jastae yaha haami le score naam ko variable maa 10 value store garyau ni 
+& print vitra ni raakhau print garna ko lagi;tara
+ani arko line maa same score naam ko variable maa arko value jastae 20 store garyau ni; 
+20 store garepaxi tesko arko line maa haami le score naam ko variable lai ajhae print vitra
+raakhyau ni; ho yaha Output Nikaalda ke hune vayo ki suru ko line maa
+ tw 10 print hune ho cuz suru maa store naam ko variable vitra 10 value haalya xau but
+Output ko second line maa 20 print hune Kina vane haami le aafno code maa 3rd line maa
+score naam ko variable ko value lai ReAssign(feri kunae value raakheko) gareka xau
+ and python interpreter le line by line check garne vayekole aafno suru ko line ko output
+ 10 aayo and arko 20
 """
 score = 10
 print(score)
 
 score = 20
 print(score)
+"""
+Multiple Assignment in Python-
+What it means: 
+Multiple assignment allows us to assign values to multiple variables 
+simultaneously in a single line of code(nepali maa simplu yesto bujhda ni hunxa ki 
+dherai values assign garna sakinxa ekae line maa). Instead of writing separate lines 
+for every single variable, Python matches the values on the right side 
+to the variables on the left side based on their positions.
+"""
+
+# 1. Basic Multiple Assignment
+# Assigning three variables in one single line
+x, y, z = 10, 20, 30
+print(x,y,z)  # Output:
+
+
+# 2. Real-world example (Storing basic server or user data)
+# Matching items position by position: name -> "Server-01", port -> 80, status -> True
+server_name, port_number, is_online = "Server-01", 80, True
+
+print(f"Server: {server_name}, Port: {port_number}, Online: {is_online}")
+
+
+# 3. Swapping values easily
+# In Python, you don't need a temporary variable to swap values!
+apple_count = 5
+orange_count = 10
+
+print(f"Before swap -> Apples: {apple_count}, Oranges: {orange_count}")
+
+# Swap values instantly using multiple assignment
+apple_count, orange_count = orange_count, apple_count
+
+print(f"After swap  -> Apples: {apple_count}, Oranges: {orange_count}")
