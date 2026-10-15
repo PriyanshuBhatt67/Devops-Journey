@@ -98,24 +98,50 @@ to the variables on the left side based on their positions.
 # 1. Basic Multiple Assignment
 # Assigning three variables in one single line
 x, y, z = 10, 20, 30
-print(x,y,z)  # Output:
-
+print(x,y,z)  # Output:10 20 30
+"""yadi yesh maathi ko example multiple assignment use nagarera singlely value assign gareko
+vaye our code would be lengthy like 
+x=10
+y=20
+z=30
+print(x,y,z) #output aaune
+Ho yesari gareko vaye Code Lengthy hune thiyo; thats why we used Multiple Assignment technique in
+maathi ko code
+"""
+#Another Example in Multiple Assignment is 
+host,port,ssl = "priyanshu.com",443,True
+print(host) # priyanshu.com print hune ho
+print(port) # 443 print hune ho
 
 # 2. Real-world example (Storing basic server or user data)
 # Matching items position by position: name -> "Server-01", port -> 80, status -> True
 server_name, port_number, is_online = "Server-01", 80, True
 
-print(f"Server: {server_name}, Port: {port_number}, Online: {is_online}")
+print(f"Server: {server_name}, Port: {port_number}, Online: {is_online}") 
+
+""" yesh maathi ko example maa maile print vitra suru maa f lagayera paxi 2 ota
+double quotes ko vitra na raakhera    just print paxi 2 ota double quotes vitra raakhya vaye
+hamro Output would be                                   Server: {server_name} 
+but f lagayeko kaaran hamro output will print           Server: Server-01
+
+Basically in Python putting f before double quotation marks stands for 
+Format (or f-string Or Formatted String Literal).    """
 
 
-# 3. Swapping values easily
+# 3. Swapping values easily with (no temp/temporary variables needed)
 # In Python, you don't need a temporary variable to swap values!
 apple_count = 5
 orange_count = 10
 
 print(f"Before swap -> Apples: {apple_count}, Oranges: {orange_count}")
 
-# Swap values instantly using multiple assignment
+# Now we Swap values instantly using multiple assignment
 apple_count, orange_count = orange_count, apple_count
 
 print(f"After swap  -> Apples: {apple_count}, Oranges: {orange_count}")
+
+#Basic example of Multiple Assignment is 
+a, b = 10, 20
+a, b = b, a
+print(a, b)  # aba output maa a=20 and b=10 vayo , easily swapped the values
+
