@@ -1,5 +1,6 @@
 """Imagine you have a box in which you store something.you write a label on that box so you can 
 identify what's inside. ho yesari  nae bujhna sakinxa ki A variable works similarly like this example.
+
 Variable is wastab maa euta Name ho that refers(points to) to a  value in our program
 OR 
 A variable is a name that stores data in memory.
@@ -21,13 +22,17 @@ Variable is essentially a name assigned to a value
 # Variable_Name=Value
 
 # EK Main kura Bujhnu parne ki 
+
 """ In Python we don't declare the Data Type/Type of Variable in
  Python(this Feature is called Dynamic Typing) """
+
 #Python Automatically Detects the DataType based on the Value Assigned to Variable
 # C & C++ programming languages xan ni; tesma yo Dynamic Typying wala feature hudaina
 #Jastae example is
+
 name = "Priyanshu" # haami lai yaha data type declare garnu parena,by the way string manxa python le yeslai
-# C wa C++ vako vaye Aile std::string name = "Priyanshu";  lekhnu parthyo String ko Data Type lai declare garnu parthyo but Python vayekole haami lai jarurat hudaina 
+# C wa C++ vako vaye Aile std::string name = "Priyanshu";  lekhnu parthyo String ko Data Type lai
+#  declare garnu parthyo but Python vayekole haami lai jarurat hudaina 
 
 print(name) # yo statement paxi 'Priyanshu' Print hunexa
 
@@ -59,6 +64,7 @@ print(server2_port)
 
 """ 1. Variable assignment( wa Variable maa value Assign garne) -kaam 
 maathi ko example maa ni assign gariyo;  but with more examples lai tala herda hunxa """
+
 name = "Priyanshu"
 age = 21
 is_learning_devops = True
@@ -67,6 +73,7 @@ print(name)
 print(age)
 print(is_learning_devops)
 print(University)
+
 """2. Variable ReAssignment - Yo ni easy ho . Variable ReAssignment vanna le is
 Value lai Feri(Re) Assign gareko. Python Interpreter based language honi
 ho tesaile jastae yaha haami le score naam ko variable maa 10 value store garyau ni 
@@ -85,6 +92,7 @@ print(score)
 
 score = 20
 print(score)
+
 """
 Multiple Assignment in Python-
 What it means: 
@@ -97,6 +105,7 @@ to the variables on the left side based on their positions.
 
 # 1. Basic Multiple Assignment
 # Assigning three variables in one single line
+
 x, y, z = 10, 20, 30
 print(x,y,z)  # Output:10 20 30
 """yadi yesh maathi ko example multiple assignment use nagarera singlely value assign gareko
@@ -130,6 +139,7 @@ Format (or f-string Or Formatted String Literal).    """
 
 # 3. Swapping values easily with (no temp/temporary variables needed)
 # In Python, you don't need a temporary variable to swap values!
+
 apple_count = 5
 orange_count = 10
 
@@ -145,3 +155,78 @@ a, b = 10, 20
 a, b = b, a
 print(a, b)  # aba output maa a=20 and b=10 vayo , easily swapped the values
 
+# 4. Variables reference objects
+
+"""In Python, a variable is not a box that holds data — it's a 
+ name tag (reference) attached to an object in memory.
+ OR 
+ can be said as
+ In Python, a variable does not store the value itself.
+
+It stores a reference (a pointer / memory address) to an object. which as be  shown as
+
+variable  variable  ──>  object in memory  object in memory
+"""
+# when we write 
+x = 10
+#python does 2 things - 
+# i)Creates an object(which is integer object here)   10    in memory
+# ii)Makes the name   x    point to that object
+
+# 1) Now Basic Variable Reference Example:
+
+A=100 #object lives in memory; 100 will live in memory
+b=A # here b      now points to the same integer object(which is 100 here) as             A does
+print(A) #100 print hune
+print(b) #yesma ni 100 print hune
+print(id(A))#yaha e.g 140712345678 dekhayo vane b ko ni same dekhaune ho cuz memory address dekhaune yesle
+print(id(b))# same memory address dekhaune.  id of v cuz    same id(as A)   point to(Or -->) same object 10
+print(A is b)#Output would be   True   cuz both points to same object(which is 100 here)
+# id() shows the memory address of object
+#if 2 variables have same id, they refer(points to) to the same object
+
+#This example maa totally clearing doubt for How to references
+
+x = [1, 2, 3]
+y = x
+z = [1, 2, 3]          # new list with same values
+
+print(x is y)          # True  (same object)
+print(x is z)          # False (different objects vayekole)
+print(x == z)          # True  (same values)
+print(id(x), id(y), id(z)) #Memory Address haru print hune hun, baaki yo related bataisake Ma Priyanshu le
+
+#Now Another question will come in mind that why Variable reference is also important
+#in order to understand ,let us see thhe another example
+
+A=[1,2,3] # here the list [1,2,3] is object, list is example of mutable object
+b=A
+b.append(4) # append means adding
+print(A) # Although we Append in   b  but when print A then got also change in A,Output : [1,2,3,4]
+# Here Both names point to one list, so changing through b affects A.
+
+#Another example is 
+a = [1, 2, 3]
+b = a
+
+b.append(4)
+
+print("a:", a)
+print("b:", b)
+print("Same object:", a is b)
+
+#2)Interesting thing is Re-assignment creates a new reference , means that
+
+""" when you assign a new value to an existing variable, you are changing which memory address 
+that variable points to, rather than modifying the data inside the original memory address
+Nepali maa matlab ki code maa kunae euta variable lai suru maa euta value
+ diyera tesko id print garyau vane #memory address tw farak dekhaune ho 
+ & tei code maa tyo same variable lai different value diyera
+#print garda different memory address dekhaune ho cuz reality maa yei vayeko hunxa"""
+
+#Example is
+
+A=30
+print(id(A))
+A=20
+print(id(A))
