@@ -337,7 +337,7 @@ print(a == c)       # True   (same value)
 
 ---
 
-## 17. Quick Reference Cheat Sheet
+## 14. Quick Reference Cheat Sheet
 
 ```python
 # Checking types
