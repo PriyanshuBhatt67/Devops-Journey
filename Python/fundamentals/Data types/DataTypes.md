@@ -50,3 +50,21 @@ print(type(port))           # <class 'int'>
 print(port * 2)             # 16160
 print(15 // 2)              # 7 (floor division)
 print(15 % 2)               # 1 (remainder)
+### 3.2 Float (`float`)
+cpu_usage = 67.5
+memory_gb = 15.75
+latency = 23.4
+
+print(round(cpu_usage, 1))
+print(f"CPU: {cpu_usage}%")
+
+### 3.3 Complex (`rarely used in DevOps`)
+z = 3 + 4j
+print(z.real, z.imag)
+
+## 4. Boolean (`bool`)
+is_running = True
+debug = False
+is_healthy = cpu_usage < 80
+
+print(type(is_running))     # <class 'bool'>
